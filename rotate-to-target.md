@@ -65,4 +65,42 @@ $$
 \end{align}
 $$
 
+Expanding the relative terms:
+
+$$
+\begin{align}
+{\Delta}\omega &= \sqrt{2{\Delta}a * {\alpha_{max}}}\\
+\omega_T - \omega_0 &= \sqrt{2(a_T - a_0) * {\alpha_{max}}}
+\end{align}
+$$
+
 So, if the current relative angular velocity is less than ${\Delta}\omega$ as calculated above based on relative angle and maximum acceleration, then accelerate, otherwise, decelerate.
+
+# Alternative - Calculate Acceleration
+
+$$
+\begin{align}
+a_T &= a_0 + {\omega_0}t + \frac{1}{2}{\alpha}t^2\\
+\omega_T &= \omega_0 + {\alpha_{max}}t
+\end{align}
+$$
+
+Solve for $\alpha$
+
+$$
+\begin{align}
+0 &= {\Delta}a + \Delta\omega\left(-\frac{\Delta\omega}{\alpha_{max}}\right) + \frac{1}{2}\alpha\left(-\frac{\Delta\omega}{\alpha_{max}}\right)^2\\
+0 &= {\Delta}a - \frac{\Delta\omega^2}{\alpha_{max}} + \frac{1}{2}\alpha\left(\frac{\Delta\omega^2}{\alpha_{max}^2}\right)\\
+0 &= {\Delta}a - \frac{\Delta\omega^2}{\alpha_{max}} + \frac{1}{2}\frac{\alpha\Delta\omega^2}{\alpha_{max}^2}\\
+0 &= {\Delta}a\alpha_{max}^2 - \Delta\omega^2\alpha_{max} + \frac{1}{2}\alpha\Delta\omega^2\\
+-\frac{1}{2}\alpha\Delta\omega^2 &= {\Delta}a\alpha_{max}^2 - \Delta\omega^2\alpha_{max}\\
+\frac{1}{2}\alpha\Delta\omega^2 &= -{\Delta}a\alpha_{max}^2 + \Delta\omega^2\alpha_{max}\\
+\frac{1}{2}\alpha\Delta\omega^2 &= \Delta\omega^2\alpha_{max} - {\Delta}a{\alpha_{max}^2}\\
+\frac{1}{2}\alpha &= \frac{\Delta\omega^2\alpha_{max} - {\Delta}a{\alpha_{max}^2}}{\Delta\omega^2}\\
+\frac{1}{2}\alpha &= \frac{\Delta\omega^2\alpha_{max}}{\Delta\omega^2} - \frac{{\Delta}a{\alpha_{max}^2}}{\Delta\omega^2}\\
+\frac{1}{2}\alpha &= \frac{\Delta\omega^2}{\Delta\omega^2}{\alpha_{max}} - \frac{{\Delta}a}{\Delta\omega^2}{\alpha_{max}^2}\\
+\frac{1}{2}\alpha &= \alpha_{max} - \frac{{\Delta}a}{\Delta\omega^2}{\alpha_{max}^2}\\
+\frac{1}{2}\alpha &= \alpha_{max}\left(1 - \frac{{\Delta}a}{\Delta\omega^2}\alpha_{max}\right)\\
+\alpha &= 2\alpha_{max}\left(1 - \frac{{\Delta}a}{\Delta\omega^2}\alpha_{max}\right)
+\end{align}
+$$
