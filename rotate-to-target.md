@@ -50,7 +50,7 @@ $$
 
 Now, could solve for $t$, but I think it'd be better to solve for the maximum $\omega_0$ that we can have at time $t$, and if angular velocity $\omega$ is less than that, we accelerate.
 
-Start by substiting $t$:
+Start by substituting $t$:
 
 $$
 \begin{align}
